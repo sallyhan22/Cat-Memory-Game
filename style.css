@@ -1,6 +1,7 @@
 body {
     height: 100vh;
     background-color: #7a7aff;
+    color: white;
 }
 
 .memory-game {
@@ -42,9 +43,4 @@ body {
 
 .front {
     transform: rotateY(180deg);
-}
-
-#result {
-    color: white;
-    width: 100%
 }
