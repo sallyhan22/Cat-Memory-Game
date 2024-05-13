@@ -7,6 +7,17 @@ let lockBoard = false;
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+// Immediately Invoked Expression (IIFE) will execute itself right after declaration
+(function shuffle() {
+    cards.forEach(card => {
+        let randomIndex = Math.floor(Math.random() * 12);
+        card.style.order = randomIndex;
+    });
+})();
+
+
+$(".memory-game").html($(".memory-game .memory-card").sort(function(){return Math.random()-.5}));
+
 function flipCard() {
 
 // to prevent any more cards to be flipped if two have already been flipped

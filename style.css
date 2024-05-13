@@ -20,11 +20,13 @@ body {
     transform: scale(1);
     transform-style: preserve-3d;
     transition: all 0.5s linear;  
+    cursor: pointer;
 }
 
 .memory-card:active {
     transform: scale(0.97);
     transition: transform .2s;
+
 }
 
 .memory-card.flip {
