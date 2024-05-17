@@ -4,7 +4,6 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
-
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 // Immediately Invoked Expression (IIFE) will execute itself right after declaration
@@ -14,9 +13,6 @@ cards.forEach(card => card.addEventListener('click', flipCard));
         card.style.order = randomIndex;
     });
 })();
-
-
-$(".memory-game").html($(".memory-game .memory-card").sort(function(){return Math.random()-.5}));
 
 function flipCard() {
 
@@ -49,8 +45,7 @@ function checkForMatch() {
         // update the score
     } else {
         unflipCards();
-    }
-    
+    } 
 }
 
 function disableFlipping() {
