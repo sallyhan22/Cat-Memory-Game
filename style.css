@@ -1,22 +1,24 @@
 body {
     height: 100%;
     background-color: #7a7aff;
-    color: white;   
+    color: white;  
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-#result {
-    width: 100%;
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .memory-game {
     width: 440px;
     height: 330px;
+    padding-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
@@ -55,4 +57,19 @@ body {
 
 .front {
     transform: rotateY(180deg);
+}
+
+#restart-btn {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 8px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#restart-btn:active {
+    transform: scale(0.97);
+    transition: transform .2s;
 }
