@@ -4,15 +4,20 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+shuffleCards();
+setCards();
 
-// Immediately Invoked Expression (IIFE) will execute itself right after declaration
-(function shuffle() {
+
+function shuffleCards() {
     cards.forEach(card => {
         let randomIndex = Math.floor(Math.random() * 12);
         card.style.order = randomIndex;
     });
-})();
+}
+
+function setCards() {
+    cards.forEach(card => card.addEventListener('click', flipCard));
+}
 
 function flipCard() {
 
@@ -72,3 +77,18 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+function restartGame() {
+    resetBoard();
+    
+    cards.forEach(card => card.classList.remove('flip'));
+    
+    cards.forEach(card => card.removeEventListener('click', flipCard));
+
+    setTimeout(() => {
+        shuffleCards();
+    }, 300);
+
+    setTimeout(() => {
+        setCards();
+    }, 500); 
+}
