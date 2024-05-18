@@ -10,8 +10,8 @@ https://github.com/sallyhan22/cat-memory-game/assets/122143742/4181fdff-8d0c-4c6
 
 **Tech used:** HTML, CSS, JavaScript
 
-- Utilized responsive web design principles to designed the gameboard and the layout of the entire game screen in HTML and CSS
-- JavaScript was used to manipulate HTML elements according to the core functionalities required for the game (e.g. shuffling cards; assigning random order values to the cards, flipping cards; adding a flip class to the class list, etc.)
+- Utilized responsive web design principles to design the gameboard and the layout of the game screen in HTML and CSS
+- JavaScript was used to manipulate HTML elements according to the core functionalities required for the game (e.g. shuffling and flipping cards)
 - JavaScript was also used to check the conditions of the gameboard in response to user activity (e.g. checking for matches)
 
 
