@@ -55,7 +55,7 @@ function checkForMatch() {
         }, 200)
         setTimeout(() => {
             checkWinner();
-        }, 1000);
+        }, 1200);
     } else {
         unflipCards();
     } 
