@@ -1,12 +1,12 @@
 const cards = document.querySelectorAll('.memory-card');
-let score = document.getElementById('score');
+let scoreDisplay = document.getElementById('score-display');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 var sc = 0;
 
-
 startGame();
+updateScoreDisplay(0);
 
 function startGame() {
     shuffleCards();
@@ -25,7 +25,6 @@ function setCards() {
 }
 
 function flipCard() {
-
 // to prevent any more cards to be flipped if two have already been flipped
     if (lockBoard) {
         return;
@@ -52,26 +51,24 @@ function checkForMatch() {
     if (isMatch) {
         disableFlipping();
         setTimeout(() => {
-            updateScore(++sc);
+            updateScoreDisplay(++sc);
         }, 200)
         setTimeout(() => {
             checkWinner();
-        }, 200);
+        }, 1000);
     } else {
         unflipCards();
     } 
 }
 
-function updateScore(s) {
+function updateScoreDisplay(s) {
     sc = s;
-    score.innerHTML = sc;
+    scoreDisplay.innerHTML = "Score: " + sc;
 }
-
-
 
 function checkWinner() {
     if (sc == 6) {
-        alert("Congratulations! You have found all the matches.");
+        scoreDisplay.innerHTML = "You won!";
     }
 }
 
@@ -102,7 +99,7 @@ function resetBoard() {
 function restartGame() {
     resetBoard();
 
-    updateScore(0);
+    updateScoreDisplay(0);
     
     cards.forEach(card => card.classList.remove('flip'));
     
