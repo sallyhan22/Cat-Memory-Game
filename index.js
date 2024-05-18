@@ -4,8 +4,13 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
-shuffleCards();
-setCards();
+
+startGame();
+
+function startGame() {
+    shuffleCards();
+    setCards();
+}
 
 
 function shuffleCards() {
