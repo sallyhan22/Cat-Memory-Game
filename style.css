@@ -1,19 +1,27 @@
-body {
-    height: 100%;
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #7a7aff;
     color: white;  
+}
+
+#info-bar {
+    padding-left: 10px;
+}
+
+#info-bar:hover {
+    cursor: pointer;
+}
+
+
+
+#game-board {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 5%;
+    padding: 3%;
     gap: 20px;
-}
-
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .memory-game {

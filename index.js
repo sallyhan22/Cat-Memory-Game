@@ -116,3 +116,7 @@ function restartGame() {
         setCards();
     }, 500); 
 }
+
+function displayInstructions() {
+    alert("Click on a card to flip it and try to find its match! Good luck and have fun!");
+}
